@@ -1,0 +1,39 @@
+<div class="container mt-1 bg-white">
+    <div class="row app-container pt-2 pb-2" >
+        <div class="col-sm-4  offset-md-1 " style="width: 18rem;">
+        <div class="card mb-2" >
+            <div class="card-body">
+            
+                <form #usersForm="ngForm" (ngSubmit)="getBookedTicketFormData(usersForm.value)">
+
+                <label for="seats"><b>Seats:</b></label>
+                <input type="text" formControlName="seats"  name="seats" class="form-control" required placeholder=""/>
+                
+                <span style="color: red;">Enter Valid No. of Seats</span>
+                
+                <label for="amount">Total Amount:</label>
+                <input type="text" id="out2x" name="amount">
+
+
+                
+                <a href="#" class="btn btn-primary">Proceed to Pay</a>
+                
+
+            </form>
+            
+            </div>
+        </div>
+        </div>
+
+        
+
+
+    </div>
+</div>
+<script>
+    function mult(value){
+        var x;
+        x= 250 * value ;
+        document.getElement('out2x').value = x ;
+    }
+</script>
